@@ -1,0 +1,3 @@
+unsolved:
+2021 hw07 funcs install_camera
+2021 hw05
