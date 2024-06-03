@@ -18,8 +18,7 @@ def lambda_curry2(func):
     >>> [type(x).__name__ for x in ast.parse(inspect.getsource(lambda_curry2)).body[0].body]
     ['Expr', 'Return']
     """
-    "*** YOUR CODE HERE ***" # REMEMBER TO REMOVE THIS LINE !!!
-    return ______
+    return lambda x:lambda y:func(x,y)
 
 
 def lambda_curry2_syntax_check():
@@ -61,6 +60,13 @@ def count_cond(condition):
     8
     """
     "*** YOUR CODE HERE ***"
+    def ans(n):
+        total = 0
+        for i in range(1,n+1):
+            if condition(n,i):
+                total+=1
+        return total
+    return ans 
 
 
 def composer(f, g):
@@ -96,6 +102,11 @@ def composite_identity(f, g):
     False
     """
     "*** YOUR CODE HERE ***"
+    def ans(x):
+        if f(g(x)) == g(f(x)):
+            return True
+        return False
+    return ans
 
 
 def cycle(f1, f2, f3):
@@ -125,3 +136,16 @@ def cycle(f1, f2, f3):
     19
     """
     "*** YOUR CODE HERE ***"
+    def ans(circle_times):
+        def g(x):
+            first,sec=circle_times//3,circle_times%3
+            for i in range(first):
+                x=f3(f2(f1(x)))
+            if sec==0:
+                return x
+            elif sec==1:
+                return f1(x)
+            elif sec==2:
+                return f2(f1(x))
+        return g
+    return ans

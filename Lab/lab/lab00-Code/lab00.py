@@ -6,7 +6,7 @@ def twenty_twenty_one():
     >>> twenty_twenty_one()
     2021
     """
-    return ______
+    return 2020+1
 
 
 def sum(a, b):
@@ -18,7 +18,7 @@ def sum(a, b):
     >>> sum(3, 8)
     11
     """
-    return ______
+    return a+b
 
 
 def square_sum(a, b):
@@ -28,4 +28,4 @@ def square_sum(a, b):
     >>> square_sum(3, 4)
     25
     """
-    return ______
+    return a*a+b*b

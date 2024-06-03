@@ -6,7 +6,7 @@ def both_odd(a, b):
     >>> both_odd(2, 1)
     False
     """
-    return a and b % 2 == 1 # You can replace this line!
+    return a%2 ==1 and b % 2 == 1 # You can replace this line!
 
 
 def factorial(n):
@@ -17,7 +17,9 @@ def factorial(n):
     >>> factorial(5)
     120
     """
-    pass  # YOUR CODE HERE
+    if n==0:
+        return 1
+    return n*factorial(n-1) # YOUR CODE HERE
 
 
 def is_triangle(a, b, c):
@@ -31,7 +33,7 @@ def is_triangle(a, b, c):
     >>> is_triangle(2, 2, 2)
     True
     """
-    pass  # YOUR CODE HERE
+    return a+b>c and b+c>a and a+c>b  # YOUR CODE HERE
 
 
 def number_of_six(n):
@@ -42,7 +44,12 @@ def number_of_six(n):
     >>> number_of_six(123456)
     1
     """
-    pass  # YOUR CODE HERE
+    total  = 0
+    while n:
+        if n%10==6:
+            total+=1
+        n//=10
+    return total
 
 
 def max_digit(x):
@@ -59,4 +66,10 @@ def max_digit(x):
     >>> a
     3
     """
-    pass  # YOUR CODE HERE
+    max_num = 0
+    while x:
+        if x%10 > max_num:
+            max_num=x%10
+        x//=10
+    return max_num
+    # YOUR CODE HERE
