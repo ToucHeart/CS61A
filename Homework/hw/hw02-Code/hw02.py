@@ -27,7 +27,9 @@ def compose(h, g):
     6
     """
     "*** YOUR CODE HERE ***"
-
+    def f(x):
+        return h(g(x))
+    return f
 def product(n, f):
     """Return the product of the first n terms in a sequence.
     n -- a positive integer
@@ -47,6 +49,10 @@ def product(n, f):
     162
     """
     "*** YOUR CODE HERE ***"
+    ans =1
+    for i in range(1,n+1):
+        ans=ans * f(i)
+    return ans
 
 def accumulate(combiner, base, n, f):
     """Return the result of combining the first n terms in a sequence and base.
@@ -69,7 +75,10 @@ def accumulate(combiner, base, n, f):
     16
     """
     "*** YOUR CODE HERE ***"
-
+    ans = base
+    for i in range(1,n+1):
+        ans = combiner(ans,f(i))
+    return ans
 def summation_using_accumulate(n, f):
     """Returns the sum of f(1) + ... + f(n). The implementation
     uses accumulate.
@@ -85,6 +94,7 @@ def summation_using_accumulate(n, f):
     True
     """
     "*** YOUR CODE HERE ***"
+    return accumulate(add,0,n,f)
 
 def product_using_accumulate(n, f):
     """An implementation of product using accumulate.
@@ -100,6 +110,7 @@ def product_using_accumulate(n, f):
     True
     """
     "*** YOUR CODE HERE ***"
+    return accumulate(mul,1,n,f)
 
 def make_repeater(h, n):
     """Return the function that computes the nth application of h.
@@ -117,6 +128,11 @@ def make_repeater(h, n):
     5
     """
     "*** YOUR CODE HERE ***"
+    def f(x):
+        for i in range(n):
+            x=h(x)
+        return x
+    return f
 
 def protected_secret(password, secret, num_attempts):
     """
@@ -138,12 +154,22 @@ def protected_secret(password, secret, num_attempts):
     """
     def get_secret(password_attempt):
         "*** YOUR CODE HERE ***"
+        nonlocal num_attempts
+        if num_attempts>0:
+            if password_attempt==password:
+                print(secret)
+            else:
+                num_attempts-=1
+                print("INCORRECT PASSWORD")
+        else:
+            print("SECRET LOCKED")
+        return get_secret
     return get_secret
 
 ##########################
 # Just for fun Questions #
 ##########################
-
+# TODO:
 def zero(f):
     return lambda x: x
 

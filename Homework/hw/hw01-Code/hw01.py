@@ -15,9 +15,9 @@ def a_plus_abs_b(a, b):
     ['return h(a, b)']
     """
     if b >= 0:
-        h = _____
+        h = add
     else:
-        h = _____
+        h = sub
     return h(a, b)
 
 def two_of_three(x, y, z):
@@ -38,7 +38,7 @@ def two_of_three(x, y, z):
     >>> [type(x).__name__ for x in ast.parse(inspect.getsource(two_of_three)).body[0].body]
     ['Expr', 'Return']
     """
-    return _____
+    return min(x*x+y*y,min(x*x+z*z,y*y+z*z))
 
 def largest_factor(x):
     """Return the largest factor of x that is smaller than x.
@@ -51,6 +51,11 @@ def largest_factor(x):
     1
     """
     "*** YOUR CODE HERE ***"
+    ans  = 1
+    for i in range(1,x):
+        if x%i==0:
+            ans =i
+    return ans
 
 def if_function(condition, true_result, false_result):
     """Return true_result if condition is a true value, and
@@ -95,12 +100,15 @@ def with_if_function():
 
 def c():
     "*** YOUR CODE HERE ***"
+    return False
 
 def t():
     "*** YOUR CODE HERE ***"
+    print(1)
 
 def f():
     "*** YOUR CODE HERE ***"
+    print(2)
 
 def hailstone(x):
     """Print the hailstone sequence starting at x and return its
@@ -117,7 +125,17 @@ def hailstone(x):
     >>> a
     7
     """
-    "*** YOUR CODE HERE ***"
+    leng=0
+    while True:
+        print(x)
+        leng+=1
+        if x==1:
+            break
+        if x%2==1:
+            x=x*3+1
+        else:
+            x=x//2
+    return leng
 
 def falling(n, k):
     """Compute the falling factorial of n to depth k.
@@ -132,6 +150,9 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
+    if k==0:
+        return 1
+    return n*falling(n-1,k-1)
 
 def double_eights(n):
     """Return true if n has two eights in a row.
@@ -150,3 +171,5 @@ def double_eights(n):
     False
     """
     "*** YOUR CODE HERE ***"
+    s=str(n)
+    return '88' in s
