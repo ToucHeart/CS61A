@@ -20,6 +20,9 @@ def number_of_six(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    if n==0:
+        return 0
+    return int(n%10==6)+number_of_six(n//10)
 
 
 def pingpong(n):
@@ -77,6 +80,10 @@ def missing_digits(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    if n<10:
+        return 0
+    a,b=n%100//10,n%10
+    return abs(a-b)+missing_digits(n//10)
 
 
 def count_change(total, next_money):

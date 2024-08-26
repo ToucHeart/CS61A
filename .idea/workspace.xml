@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ca46cb0-7894-499e-9b4e-4c1ce9515d87" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/Project/code/proj04-Code/.ok_history" beforeDir="false" afterPath="$PROJECT_DIR$/Project/code/proj04-Code/.ok_history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/code/proj04-Code/scheme" beforeDir="false" afterPath="$PROJECT_DIR$/Project/code/proj04-Code/scheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/code/proj04-Code/scheme_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/code/proj04-Code/scheme_classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/code/proj04-Code/scheme_eval_apply.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/code/proj04-Code/scheme_eval_apply.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/code/proj04-Code/tests/01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/code/proj04-Code/tests/01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/code/proj04-Code/tests/02.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/code/proj04-Code/tests/02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/hw/hw03-Code/hw03.py" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/hw/hw03-Code/hw03.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +24,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/mxj/nju-sicp-2021"
+    "last_opened_file_path": "E:/SpikeCV"
   }
 }]]></component>
   <component name="RunManager">
